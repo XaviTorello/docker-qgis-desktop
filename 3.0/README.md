@@ -21,7 +21,7 @@ This will consume the most bandwidth for the initial build but
 will be easy to update thereafter. 
 
 ```
-docker pull XaviTorello/qgis-desktop:LTR
+docker pull qgisdev/qgis-desktop:3.0
 ```
 
 
@@ -53,7 +53,7 @@ cd docker-qgis-desktop
 To build the image do:
 
 ```
-docker build -t XaviTorello/qgis-desktop:3.0 git://github.com/kartoza/docker-qgis-desktop
+docker build -t qgisdev/qgis-desktop:3.0 git://github.com/XaviTorello/docker-qgis-desktop
 ```
 
 If you follow this approach you will need to create the 
@@ -74,7 +74,7 @@ docker run --rm --name="qgis-desktop-3.0" \
 	-v ${HOME}:/home/${USER} \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
 	-e DISPLAY=unix$DISPLAY \
-	XaviTorello/qgis-desktop:3.0 
+	qgisdev/qgis-desktop:3.0 
 xhost -
 ```
 The above is the content of run-qgis-3.0-in-docker.sh so you can just
