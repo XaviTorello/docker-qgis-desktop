@@ -8,7 +8,7 @@ ENV LANG C
 COPY build /build/scripts
 RUN /build/scripts/getDeps.sh && \
     /build/scripts/getCode.sh && \
-    /build/scripts/make.sh && #\
+    /build/scripts/make.sh 
     #/build/scripts/clean.sh
 
 # A few tunable variables for QGIS
