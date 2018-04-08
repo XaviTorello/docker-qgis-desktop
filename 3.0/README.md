@@ -40,6 +40,13 @@ sudo cp QGIS-3.0.Docker.desktop /usr/share/applications/
 sudo cp qgis-icon-60x60.png /usr/local
 ```
 
+## Start QGIS 3.0 desktop via Docker
+
+Open the "QGIS 3.0 via Docker" through applications menu, or execute:
+```
+/usr/local/bin/run-qgis-3.0-in-docker.sh
+```
+
 
 ## Build the image yourself:
 
