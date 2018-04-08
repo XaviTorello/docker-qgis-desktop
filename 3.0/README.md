@@ -3,7 +3,7 @@ docker-qgis-desktop
 
 A simple docker container that runs QGIS 3.0 Girona desktop.
 
-Based on [Tim Sutton](https://github.com/kartoza) work.
+Based on [Tim Sutton](https://github.com/kartoza) and [QGIS-server docker](https://github.com/qgis/QGIS/blob/master/.docker/qgis.dockerfile) work.
 
 Note this is still experimental and probably does not represent
 the most optimal way to do this. Current limitations:
