@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM qgis/qgis3-build-deps:latest
 MAINTAINER Xavi Torelló <info@xaviertorello.cat>
 # Based off work by Tim Sutton <tim@kartoza.com>
 # Based off work by Patrick Valsecchi<patrick.valsecchi@camptocamp.com>
@@ -6,10 +6,9 @@ MAINTAINER Xavi Torelló <info@xaviertorello.cat>
 ENV LANG C
 
 COPY build /build/scripts
-RUN /build/scripts/getDeps.sh && \
-    /build/scripts/getCode.sh && \
+RUN /build/scripts/getCode.sh && \
     /build/scripts/make.sh 
-    #/build/scripts/clean.sh
+    /build/scripts/clean.sh
 
 # A few tunable variables for QGIS
 ENV QGIS_DEBUG 5
