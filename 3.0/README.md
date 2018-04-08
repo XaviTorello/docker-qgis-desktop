@@ -29,7 +29,7 @@ You will also need to create the
 desktop shortcut yourself by taking the resources from the git repo e.g.:
 
 ```
-curl -sL https://github.com/XaviTorello/docker-qgis-desktop/raw/master/3.0/README.md | sudo -E bash -
+curl -sL https://github.com/XaviTorello/docker-qgis-desktop/raw/master/3.0/shortcut_setup.sh | sudo -E bash -
 ```
 
 or manually coping it:
