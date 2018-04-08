@@ -6,8 +6,9 @@ add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 apt-get -y update
 
 # #-------------Application Specific Stuff ----------------------------------------------------
+# Thanks to @valpesendorfer for some unresolved dependences, see https://github.com/valpesendorfer/docker-qgis-desktop/commit/40afca6de247a77e891ee2f5d48e5d67cf374efe \
 LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get update &&  \
-    apt-get install -y bison ca-certificates ccache cmake cmake-curses-gui \
+    apt-get install -y --no-install-recommends bison ca-certificates ccache cmake cmake-curses-gui \
     dh-python doxygen expect flex gdal-bin git graphviz grass-dev libexpat1-dev \
     libfcgi-dev libgdal-dev libgeos-dev libgsl-dev libpq-dev libproj-dev \
     libqca-qt5-2-dev libqca-qt5-2-plugins libqt5opengl5-dev libqt5scintilla2-dev \
@@ -23,10 +24,9 @@ LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get update &&  \
     python3-yaml qt5-default qt5keychain-dev qtbase5-dev qtpositioning5-dev \
     qttools5-dev qttools5-dev-tools spawn-fcgi txt2tags xauth xfonts-100dpi \
     xfonts-75dpi xfonts-base xfonts-scalable xvfb \
-    # Thanks to @valpesendorfer https://github.com/valpesendorfer/docker-qgis-desktop/commit/40afca6de247a77e891ee2f5d48e5d67cf374efe \
-    gdal-bin python3-gdal python3-pip python3-pyspatialite python3-qscintilla2
+    gdal-bin python3-gdal python3-pip 
 
-pip install psycopg2
+pip3 install psycopg2 #pyspatialite
 
 chmod -R a+w /usr/lib/x86_64-linux-gnu/qt5/plugins/designer/
 chmod -R a+w /usr/lib/python3/dist-packages/PyQt5/uic/widget-plugins/
