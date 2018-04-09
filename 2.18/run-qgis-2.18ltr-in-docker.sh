@@ -1,5 +1,4 @@
 xhost +
-# --rm will remove the container as soon as it ends
 docker run --rm --name="qgis-desktop-ltr" \
 	-i -t \
 	-v ${HOME}:/home/${USER} \
