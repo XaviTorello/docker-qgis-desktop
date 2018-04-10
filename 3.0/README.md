@@ -47,6 +47,8 @@ Open the "QGIS 3.0 via Docker" through applications menu, or execute:
 /usr/local/bin/run-qgis-3.0-in-docker.sh
 ```
 
+Place your plugins at `${HOME}/qgis_plugins/plugins` local folder to "auto-integrate" it on dockerized QGIS.
+
 
 ## Build the image yourself:
 
