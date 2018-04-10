@@ -9,6 +9,7 @@ ENV CXX=/usr/lib/ccache/clang++
 ENV QT_SELECT=5
 ENV LANG=C.UTF-8
 
+RUN apt update && apt install python3-owslib vim --no-install-recommends -y
 RUN git clone --depth 1 -b final-3_0_1 git://github.com/qgis/QGIS.git /usr/src/QGIS
 
 COPY ${CACHE_DIR} /root/.ccache
